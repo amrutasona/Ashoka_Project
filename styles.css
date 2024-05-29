@@ -384,7 +384,35 @@ body {
   cursor: pointer;
 }
 
-#viewMoreBtn:hover {
+#viewMoreBtn1:hover {
+  background-color: #f0f2f3;
+}
+#viewMoreBtn2{
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #0c0c0c;
+  color: rgb(241, 6, 6);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#viewMoreBtn2:hover {
+  background-color: #f0f2f3;
+}
+#viewMoreBtn3{
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #0c0c0c;
+  color: rgb(241, 6, 6);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#viewMoreBtn3:hover {
   background-color: #f0f2f3;
 }
 

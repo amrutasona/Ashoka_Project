@@ -80,7 +80,7 @@ function scrollToTop() {
     });
 }
 
-document.getElementById('viewMoreBtn').addEventListener('click', function() {
+document.getElementById('viewMoreBtn1').addEventListener('click', function() {
   loadMoreImages();
 });
 
@@ -109,14 +109,34 @@ document.getElementById('viewMoreBtn1').addEventListener('click', function() {
 });
 
 function loadMoreContent() {
-  const contentSection = document.getElementById('contentSection');
+  const contentSection = document.getElementById('room');
   
   // New content to be loaded
   const newContent = `
 
       <div id="viewMoreBtn1">
-          <img src="room-1.jpg"alt="menu" />
-          <img src="news2.jpg" alt="menu" />
+          <li><img src="assets/room-1.jpg"alt="menu" /></li>
+          <li><img src="assets/menu-3.jpg"alt="menu" /></li>
+          <li><img src="assets/room-1.jpg"alt="menu" /></li>
+        </div>
+  `;
+
+  // Append the new content to the existing content section
+  contentSection.innerHTML += newContent;
+}
+document.getElementById('viewMoreBtn2').addEventListener('click', function() {
+  loadMoreContent();
+});
+
+function loadMoreContent() {
+  const contentSection = document.getElementById('room');
+  
+  // New content to be loaded
+  const newContent = `
+
+      <div id="viewMoreBtn2">
+          <img src="assets/room-1.jpg"alt="menu" />
+          <img src="assets/news2.jpg" alt="menu" />
           <img src="assets/news3.jpg" alt="menu" />
         </div>
   `;
@@ -124,4 +144,25 @@ function loadMoreContent() {
   // Append the new content to the existing content section
   contentSection.innerHTML += newContent;
 }
+document.getElementById('viewMoreBtn3').addEventListener('click', function() {
+  loadMoreContent();
+});
+
+function loadMoreContent() {
+  const contentSection = document.getElementById('room');
+  
+  // New content to be loaded
+  const newContent = `
+
+      <div id="viewMoreBtn3">
+          <img src="assets/room-1.jpg"alt="menu" />
+          <img src="assets/news2.jpg" alt="menu" />
+          <img src="assets/news3.jpg" alt="menu" />
+        </div>
+  `;
+
+  // Append the new content to the existing content section
+  contentSection.innerHTML += newContent;
+}
+
 
