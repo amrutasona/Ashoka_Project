@@ -52,3 +52,76 @@ ScrollReveal().reveal(".news__card", {
   ...scrollRevealOption,
   interval: 500,
 });
+// Get the button
+let mybutton = document.getElementById("scrollToTopBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {
+    scrollFunction();
+};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+mybutton.onclick = function() {
+    scrollToTop();
+};
+
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+
+document.getElementById('viewMoreBtn').addEventListener('click', function() {
+  loadMoreImages();
+});
+
+function loadMoreImages() {
+  // Array of new image URLs
+  const newImages = [
+      'image4.jpg',
+      'image5.jpg',
+      'image6.jpg',
+      // Add more image URLs as needed
+  ];
+
+  const imageGallery = document.getElementById('imageGallery');
+
+  // Loop through new images and append them to the gallery
+  newImages.forEach(src => {
+      const img = document.createElement('img');
+      img.src = src;
+      img.alt = `Image ${imageGallery.children.length + 1}`;
+      imageGallery.appendChild(img);
+  });
+}
+
+document.getElementById('viewMoreBtn1').addEventListener('click', function() {
+  loadMoreContent();
+});
+
+function loadMoreContent() {
+  const contentSection = document.getElementById('contentSection');
+  
+  // New content to be loaded
+  const newContent = `
+
+      <div id="viewMoreBtn1">
+          <img src="room-1.jpg"alt="menu" />
+          <img src="news2.jpg" alt="menu" />
+          <img src="assets/news3.jpg" alt="menu" />
+        </div>
+  `;
+
+  // Append the new content to the existing content section
+  contentSection.innerHTML += newContent;
+}
+
