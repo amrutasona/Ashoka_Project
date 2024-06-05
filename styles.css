@@ -6,8 +6,8 @@
   --text-dark: #0f172a;
   --text-light: #64748b;
   --extra-light: #f8fafc;
-  --white: #ffffff;
-  --max-width: 1200px;
+  --white: #f9f3f3;
+  --max-width: 2000px;
   --header-font: "Playfair Display", serif;
 }
 
@@ -168,7 +168,7 @@ nav {
     ),
     url("assets/header.jpg");
   background-position: center center;
-  background-size: cover;
+  background-size: 1000px;
   background-repeat: no-repeat;
 }
 
