@@ -164,5 +164,68 @@ function loadMoreContent() {
   // Append the new content to the existing content section
   contentSection.innerHTML += newContent;
 }
+let slideIndex = 0;
+
+function moveSlide(n) {
+    const slides = document.querySelectorAll('.slide');
+    slideIndex += n;
+    
+    if (slideIndex >= slides.length) {
+        slideIndex = 0;
+    } else if (slideIndex < 0) {
+        slideIndex = slides.length - 1;
+    }
+    
+    // const slidesContainer = document.querySelector('.slides');
+    // slidesContainer.style.transform = `translateX(${-slideIndex * 100}%)`;
+}
+
+// Optional: Auto slide
+let autoSlideInterval = setInterval(() => moveSlide(1), 3000);
+// function scrollToBottom() {
+//   window.scrollTo({
+//     top: document.body.scrollHeight,
+//     behavior: 'smooth'
+//   });
+// }
+
+
+
+
+
+
+// Function to scroll to the top
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// Function to scroll to the bottom
+function scrollToBottom() {
+  window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+}
+
+// Show/hide buttons based on scroll position
+window.onscroll = function() {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  var goTopBtn = document.getElementById("goTopBtn");
+  var goBottomBtn = document.getElementById("goBottomBtn");
+
+  // Show "Go to Top" button
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    goTopBtn.classList.add("show");
+  } else {
+    goTopBtn.classList.remove("show");
+  }
+
+  // Show "Go to Bottom" button
+  if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+    goBottomBtn.classList.remove("show");
+  } else {
+    goBottomBtn.classList.add("show");
+  }
+}
 
 

@@ -1,7 +1,43 @@
-<html>
-    <body bgcolor="black">
-        <img src="assets/room-1.jpg"/>
-        <img src="assets/room-2.jpg"/>
-        <img src="assets/room-3.jpg"/>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images in Containers</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-around;
+        }
+        .image-box {
+            width: 30%;
+            padding: 30px;
+            box-sizing: border-box;
+            text-align: center;
+            border-radius: 25px;
+            border: 5px solid;
+            border-color: black;
+        }
+        .image-box img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image-box">
+            <img src="assets2/room1.jpg" alt="Image 1">
+            <h3>Room 1</h3>
+        </div>
+        <div class="image-box">
+            <img src="assets2/room2.jpg" alt="Image 2">
+            <h3>Room2</h3>
+        </div>
+        <div class="image-box">
+            <img src="assets2/room3.jpg" alt="Image 3">
+            <h3>Room3</h3>
+        </div>
+    </div>
+</body>
 </html>
