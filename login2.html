@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2><form action="https://submit-form.com/3fmjcUc9Y">
+    <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <button type="submit">Login</button>
+  </form>
+</div>
+<script>
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        var enteredName = document.getElementById('name').value;
+        var enteredPassword = document.getElementById('password').value;
+
+        var correctName = 'ashoka';
+        var correctPassword = 'qwer123';
+
+        if (enteredName === correctName && enteredPassword === correctPassword) {
+            window.location.href = '"C:\Users\sachi\OneDrive\Documents\GitHub\Ashoka_Project\Ashoka_Project\mainpage.html"'; // Redirect to the main page
+        } else {
+            alert('Incorrect name or password. Please try again.');
+        }
+    });
+</script>
+</body>
+</html>
