@@ -161,18 +161,15 @@ nav {
   color: var(--secondary-color);
 }
 
-.header {
+.header{
   padding-block: 6rem;
   padding: 15%;
-  background-image:/* linear-gradient(
-      rgba(15, 26, 44, 0.5),
-      rgba(15, 26, 44, 0.5)
-    ), */
-    url("assets2/header.jpg");
+  background-image:url("assets2/header.jpg");
   background-position:center;
   background-size: 100% 100%;
   background-repeat: no-repeat;
-}
+}  
+ 
 
 .header__container .section__subheader {
   color: var(--white);
