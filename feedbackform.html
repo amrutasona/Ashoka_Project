@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashoka the Great Hotel Feedback Form</title>
+    <link rel="stylesheet" href="feedback.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Ashoka the Great Hotel Feedback Form</h1>
+        <p>Thank you for choosing Ashoka the Great! We value your feedback and strive to improve our services. Please take a few moments to share your experience with us.</p>
+        
+        <form action="submit_feedback.php" method="post">
+            <fieldset>
+                <legend>Personal Information:</legend>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+                
+                <label for="date">Date of Visit:</label>
+                <input type="date" id="date" name="date" required>
+                
+                <label for="room">Room Number (if applicable):</label>
+                <input type="text" id="room" name="room">
+            </fieldset>
+            
+            <fieldset>
+                <legend>Feedback Questions:</legend>
+                <label>How would you rate your overall experience? (1 = Very Poor, 5 = Excellent)</label>
+                <div class="rating">
+                    <label><input type="radio" name="overall_experience" value="1"> 1</label>
+                    <label><input type="radio" name="overall_experience" value="2"> 2</label>
+                    <label><input type="radio" name="overall_experience" value="3"> 3</label>
+                    <label><input type="radio" name="overall_experience" value="4"> 4</label>
+                    <label><input type="radio" name="overall_experience" value="5"> 5</label>
+                </div>
+                
+                <label>How satisfied were you with the following? (1 = Very Dissatisfied, 5 = Very Satisfied)</label>
+                <label>Check-in Process:</label>
+                <div class="rating">
+                    <label><input type="radio" name="checkin_process" value="1"> 1</label>
+                    <label><input type="radio" name="checkin_process" value="2"> 2</label>
+                    <label><input type="radio" name="checkin_process" value="3"> 3</label>
+                    <label><input type="radio" name="checkin_process" value="4"> 4</label>
+                    <label><input type="radio" name="checkin_process" value="5"> 5</label>
+                </div>
+
+                <label>Cleanliness of the Room:</label>
+                <div class="rating">
+                    <label><input type="radio" name="cleanliness" value="1"> 1</label>
+                    <label><input type="radio" name="cleanliness" value="2"> 2</label>
+                    <label><input type="radio" name="cleanliness" value="3"> 3</label>
+                    <label><input type="radio" name="cleanliness" value="4"> 4</label>
+                    <label><input type="radio" name="cleanliness" value="5"> 5</label>
+                </div>
+
+                <label>Comfort of the Bed:</label>
+                <div class="rating">
+                    <label><input type="radio" name="comfort" value="1"> 1</label>
+                    <label><input type="radio" name="comfort" value="2"> 2</label>
+                    <label><input type="radio" name="comfort" value="3"> 3</label>
+                    <label><input type="radio" name="comfort" value="4"> 4</label>
+                    <label><input type="radio" name="comfort" value="5"> 5</label>
+                </div>
+
+                <label>Quality of the Food:</label>
+                <div class="rating">
+                    <label><input type="radio" name="food_quality" value="1"> 1</label>
+                    <label><input type="radio" name="food_quality" value="2"> 2</label>
+                    <label><input type="radio" name="food_quality" value="3"> 3</label>
+                    <label><input type="radio" name="food_quality" value="4"> 4</label>
+                    <label><input type="radio" name="food_quality" value="5"> 5</label>
+                </div>
+
+                <label>Service Provided by Staff:</label>
+                <div class="rating">
+                    <label><input type="radio" name="staff_service" value="1"> 1</label>
+                    <label><input type="radio" name="staff_service" value="2"> 2</label>
+                    <label><input type="radio" name="staff_service" value="3"> 3</label>
+                    <label><input type="radio" name="staff_service" value="4"> 4</label>
+                    <label><input type="radio" name="staff_service" value="5"> 5</label>
+                </div>
+
+                <label>Amenities (pool, gym, spa, etc.):</label>
+                <div class="rating">
+                    <label><input type="radio" name="amenities" value="1"> 1</label>
+                    <label><input type="radio" name="amenities" value="2"> 2</label>
+                    <label><input type="radio" name="amenities" value="3"> 3</label>
+                    <label><input type="radio" name="amenities" value="4"> 4</label>
+                    <label><input type="radio" name="amenities" value="5"> 5</label>
+                </div>
+
+                <label for="most_liked">What did you like the most about your stay?</label>
+                <textarea id="most_liked" name="most_liked" rows="4"></textarea>
+                
+                <label for="improvement">What could we improve to enhance your experience?</label>
+                <textarea id="improvement" name="improvement" rows="4"></textarea>
+
+                <label>Would you recommend Ashoka the Great to others?</label>
+                <div class="recommend">
+                    <label><input type="radio" name="recommend" value="yes"> Yes</label>
+                    <label><input type="radio" name="recommend" value="no"> No</label>
+                </div>
+                
+                <label for="comments">Any additional comments or suggestions?</label>
+                <textarea id="comments" name="comments" rows="4"></textarea>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Consent and Follow-Up:</legend>
+                <label>May we contact you for further feedback or to discuss your comments?</label>
+                <div class="consent">
+                    <label><input type="radio" name="contact_consent" value="yes"> Yes</label>
+                    <label><input type="radio" name="contact_consent" value="no"> No</label>
+                </div>
+                
+                <label>Would you like to join our mailing list for special offers and updates?</label>
+                <div class="consent">
+                    <label><input type="radio" name="mailing_list" value="yes"> Yes</label>
+                    <label><input type="radio" name="mailing_list" value="no"> No</label>
+                </div>
+            </fieldset>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
